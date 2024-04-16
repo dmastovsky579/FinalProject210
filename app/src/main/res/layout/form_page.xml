@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Student Name:" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Student Email:"
+        android:inputType="textEmailAddress" />
+
+    <RatingBar
+        android:id="@+id/ratingDining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/editTextImprovement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="How can we improve?"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editTextMealRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meal Requests:"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Feedback" />
+
+    <TextView
+        android:id="@+id/textViewFeedbackRecorded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Your feedback has been recorded"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/buttonLastRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Last Record" />
+
+    <TextView
+        android:id="@+id/textViewLastRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+
+
+</LinearLayout>
