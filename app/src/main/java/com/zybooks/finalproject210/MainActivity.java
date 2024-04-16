@@ -33,10 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Check if the username and password match your criteria
                 if (isValidCredentials(username, password)) {
-                    // Authentication successful, navigate to HomeActivity
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                    finish();
+                    setContentView(R.layout.activity_home);
                 } else {
                     // Authentication failed, show error message or handle accordingly
                     // For example, display a Toast message indicating invalid credentials
