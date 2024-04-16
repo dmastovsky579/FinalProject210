@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/buttonPage1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_marginTop="260dp"
         android:layout_marginLeft="19dp"
         android:text=">"
@@ -17,26 +17,26 @@
 
     <Button
         android:id="@+id/buttonPage2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:text=">"
         android:layout_marginTop="62dp"
         android:layout_marginLeft="19dp"/>
 
     <Button
         android:id="@+id/buttonPage3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:text=">"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
         android:layout_marginLeft="19dp" />
 
     <Button
         android:id="@+id/buttonPage4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:text=">"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="19dp" />
 
 </LinearLayout>
