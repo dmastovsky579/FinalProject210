@@ -6,10 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-// LoginActivity.java
+// MainActivity.java
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextUsername;
@@ -21,22 +20,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Initialize views
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
 
+        // Set click listener for the login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Retrieve the text entered in the EditText fields
                 String username = editTextUsername.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
 
-                // Check if the username and password match your criteria
+                // Check if the entered credentials are valid
                 if (isValidCredentials(username, password)) {
-                    setContentView(R.layout.activity_home);
+                    // If valid, navigate to HomeActivity
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish(); // Close this activity
                 } else {
-                    // Authentication failed, show error message or handle accordingly
-                    // For example, display a Toast message indicating invalid credentials
+                    // If credentials are invalid, display a toast message
                     Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -45,12 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
     // Method to validate username and password
     private boolean isValidCredentials(String username, String password) {
-        // Here you can implement your own logic for authentication
-        // For simplicity, let's assume there's a hardcoded username and password
+        // Hardcoded valid credentials for demonstration
         String validUsername = "example";
         String validPassword = "password";
 
-        // Compare input username and password with valid credentials
+        // Return true if the entered credentials match the valid ones
         return username.equals(validUsername) && password.equals(validPassword);
     }
 }

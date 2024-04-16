@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Declaration for HomeActivity -->
+        <activity android:name=".HomeActivity" />
+
+        <!-- Declarations for other activities -->
         <activity android:name=".Page1Activity" />
         <activity android:name=".Page2Activity" />
         <activity android:name=".Page3Activity" />
