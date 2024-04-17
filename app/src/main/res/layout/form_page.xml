@@ -1,73 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    android:background="@drawable/form_page">
+    android:background="@drawable/formpage">
 
-    <EditText
-        android:id="@+id/editTextName"
+    <LinearLayout
+        android:id="@+id/linearLayoutForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Student Name:" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Student Email:"
-        android:inputType="textEmailAddress" />
-
-    <RatingBar
-        android:id="@+id/ratingDining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:stepSize="1.0"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
-        android:id="@+id/editTextImprovement"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="How can we improve?"
-        android:inputType="textMultiLine" />
-
-    <EditText
-        android:id="@+id/editTextMealRequest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Meal Requests:"
-        android:inputType="textMultiLine" />
-
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit Feedback" />
-
-    <TextView
-        android:id="@+id/textViewFeedbackRecorded"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="Your feedback has been recorded"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:id="@+id/buttonLastRecord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show Last Record" />
-
-    <TextView
-        android:id="@+id/textViewLastRecord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:layout_above="@id/signOutImageView"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
-        android:visibility="gone" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Name:" />
 
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Email:"
+            android:inputType="textEmailAddress" />
+
+        <RatingBar
+            android:id="@+id/ratingDining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/editTextImprovement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="How can we improve?"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/editTextMealRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meal Requests:"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Feedback" />
+
+        <TextView
+            android:id="@+id/textViewFeedbackRecorded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Your feedback has been recorded"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/buttonLastRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Last Record" />
+
+        <TextView
+            android:id="@+id/textViewLastRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- ImageView for signing out -->
+    <ImageView
+        android:id="@+id/signOutImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/signout"
+        android:onClick="onImageViewClick"/>
+
+    <!-- ImageView for home button -->
+    <ImageView
+        android:id="@+id/homeImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/home_button"
+        android:onClick="onImageViewClick"/>
+
+</RelativeLayout>

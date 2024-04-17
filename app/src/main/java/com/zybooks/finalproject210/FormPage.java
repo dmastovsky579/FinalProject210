@@ -98,7 +98,16 @@ public class FormPage extends AppCompatActivity {
             // Redirect to the home activity
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
+        } else if (viewId == R.id.signOutImageView) {
+            // Redirect to the log in activity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else if (viewId == R.id.homeImageView) {
+            // Redirect to the home activity
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
         }
     }
+
 
 }
