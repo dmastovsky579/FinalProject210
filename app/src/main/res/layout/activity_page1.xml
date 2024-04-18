@@ -6,12 +6,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/template">
 
-    <TextView
-        android:id="@+id/textViewPage1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Page 1"
-        android:layout_centerInParent="true" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="-200dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tonights DINNER rating"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"/>
+
+        <RatingBar
+            android:id="@+id/ratingDining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="2.5"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textViewClassicsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CLASSICS"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewClassicsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chicken Marsala, Rice Pilaf, Broccoli, Squash"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewVegetarianHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VEGETARIAN"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/textViewVegetarianContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spring Roll, Beans, Broccoli Squash"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewCucinaHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CUCINA"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/textViewCucinaContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Italian pork sausage and vegetable pasta saute"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
 
     <Button
         android:id="@+id/buttonFeedback"
